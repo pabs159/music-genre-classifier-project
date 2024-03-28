@@ -20,7 +20,7 @@ if [ $EXIST ]; then
         exit
     fi
     echo "container already exist, but is not running"
-    docker start $DC
+    docker start -a $DC
     exit
 fi
 echo "running container..."

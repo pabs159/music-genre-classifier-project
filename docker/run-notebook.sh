@@ -3,5 +3,8 @@
 #
 echo "starting notebook. . ." 
 
-jupyter notebook --allow-root --ip 0.0.0.0 --no-browser
-
+jupyter trust GTZAN-Deep-Learning.ipynb
+jupyter notebook --allow-root --ip 0.0.0.0 --no-browser &
+sleep 1
+jupyter server list
+sleep infinity
