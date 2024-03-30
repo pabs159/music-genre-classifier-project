@@ -1,0 +1,4 @@
+Have some 3d spectagrams 
+compare wav vs flac vs mp3
+ffmpeg -i blues.00000.wav -af aformat=s16:44100 -ac 2 blues.00000.flac
+
