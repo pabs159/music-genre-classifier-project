@@ -27,6 +27,8 @@ If the container is already running then it will notify the user.
 When running the _stop.sh_ command it will copy the 4 notebooks out 
 of the container and into the root of the project.
 
+The container will copy in the `data` directory so make sure you have ran your conversions before running the container!
+
 ```
 pabs:music-genre-classifier-project$ ./stop.sh dev
 /home/pabs/GitRepos/UT_Grad_School/music-genre-classifier-project
