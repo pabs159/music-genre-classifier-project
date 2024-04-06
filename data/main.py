@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 import argparse
-import os
-from CsvWriter import CsvWriter
 from AudioFeatures import AudioFeatures
 
 if __name__ == '__main__':
@@ -11,7 +9,7 @@ if __name__ == '__main__':
 
     # Add arguments
     parser.add_argument('-d', '--rootdir', required=True, type=str, help='Root directory containing audio files.')
-    parser.add_argument('-o', '--output_filename', required=True, type=str, help='Output filename for CSV.')
+    parser.add_argument('-o', '--output_filename', required=True, type=str, help='Output filename for CSV. Note this will be dumped in the input directory.')
     parser.add_argument('-n', '--number_samples', required=False, type=int, default=30, help='Number of samples [Default is 1 per song].')
 
     # Parse arguments
