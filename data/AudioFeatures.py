@@ -99,7 +99,7 @@ class AudioFeatures():
         perceptr_var = float(np.var(librosa.perceptual_weighting(D**2, frequencies=librosa.fft_frequencies(sr=sr))))
 
         tempo = librosa.feature.tempo(y=y, sr=sr)
-
+        tempo = tempo[0] # remove from array 
         mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)
         # Arrays 
         mfccs_means = np.mean(mfccs, axis=1)
