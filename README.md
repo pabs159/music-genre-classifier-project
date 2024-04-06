@@ -82,3 +82,6 @@ audio_conversions/flac/
   - It takes one argument that is the filename of where to write 
   - It then writes the header along with the data
 - These CSV files match the format of the original [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)
+
+### Training 
+- After you have converted the wav formated files of the original dataset, and produced the corresponding csv file. You can create a notebook (for install there is a notebook for each audio format) and run it. You can also make varying lengths of features for more analysis (3 sec samples vs 10 sec samples). 
