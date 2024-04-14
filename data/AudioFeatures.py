@@ -5,6 +5,7 @@ import numpy as np
 import os
 from CsvWriter import CsvWriter
 import warnings
+import audioread
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
@@ -38,7 +39,11 @@ class AudioFeatures():
             self.getAudio(af_path, label)
 
     def getAudio(self, audio_file, label):
-        y_full, sr = librosa.load(audio_file)
+        try:
+            y_full, sr = librosa.load(audio_file)
+        except audioread.exceptions.NoBackendError:
+            print(f"Error: No backend available for loading file: {audio_file}")
+            return
         
         if THIRTY_SEC % self.duration != 0:
             raise ValueError("Duration is not divisible into 30")
