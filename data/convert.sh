@@ -78,10 +78,6 @@ mkdir -p $OUTPUT_PATH
 
 tree -dfi --noreport $INPUT_DIR | xargs -I{} mkdir -p "$OUTPUT_PATH/{}"
 
-# To Do
-#if [[ -z $AFORMAT ]]; then
-#files
-
 THREADS=16
 for i in $INPUT_DIR/*/*.wav; do ffmpeg -hide_banner -loglevel error -threads $THREADS $OVERWRITE -i "$i" "$OUTPUT_PATH/${i%.*}.$CONV_FMT"; done
 
